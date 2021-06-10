@@ -1,0 +1,28 @@
+{
+  "name": "message-board",
+  "version": "1.0.0",
+  "description": "A mini message board project done with express.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S460s/message-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S460s/message-board/issues"
+  },
+  "homepage": "https://github.com/S460s/message-board#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0"
+  }
+}
