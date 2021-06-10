@@ -6,6 +6,7 @@ const PORT = 8000;
 app.set('view engine', 'pug');
 
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
 
 const messages = [
 	{
@@ -22,6 +23,16 @@ const messages = [
 
 app.get('/', (req, res) => {
 	res.render('index', { title: 'Homepage', messages });
+});
+
+app.get('/new', (req, res) => {
+	res.render('form', { title: 'Add new message' });
+});
+
+app.post('/new', (req, res) => {
+	const { text, user } = req.body;
+	messages.push({ text, user, added: new Date() });
+	res.redirect('/');
 });
 
 app.listen(PORT, () => {
