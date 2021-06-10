@@ -59,6 +59,7 @@ input[type='text']:focus {
 	color: #30826b;
 	background-color: white;
 	transition: color, background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	cursor: pointer;
 }
 
 .goBack {
