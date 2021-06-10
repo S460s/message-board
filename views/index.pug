@@ -7,12 +7,13 @@ html(lang="en")
     link(rel="stylesheet", href="styles/main.css")
     title #{title}
   body
-    h1 #{title}
-    p Message Board
-    div 
-      each message in messages 
-        div.message
-          - const {text, user, added } = message 
-          p #{text}
-          p #{user}
-          p Added on #{added.getUTCDate()}/#{added.getUTCMonth() + 1}/#{added.getUTCFullYear()} at #{added.getHours()}:#{added.getMinutes()}
+  header 
+      h1.title  #{title}
+  div 
+    each message in messages 
+      div.messageCard
+        - const {text, user, added } = message 
+        p.msg #{text}
+        p.user #{user}
+        p.date Added on #{added.getUTCDate()}/#{added.getUTCMonth() + 1}/#{added.getUTCFullYear()} at #{added.getHours()}:#{added.getMinutes()}
+  a(href="/new").addMsg Add message 

@@ -22,7 +22,7 @@ const messages = [
 ];
 
 app.get('/', (req, res) => {
-	res.render('index', { title: 'Homepage', messages });
+	res.render('index', { title: 'Message Board', messages });
 });
 
 app.get('/new', (req, res) => {
@@ -33,6 +33,10 @@ app.post('/new', (req, res) => {
 	const { text, user } = req.body;
 	messages.push({ text, user, added: new Date() });
 	res.redirect('/');
+});
+
+app.use((req, res) => {
+	res.render('404', { title: '404' });
 });
 
 app.listen(PORT, () => {
