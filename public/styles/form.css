@@ -40,7 +40,7 @@ input {
 	padding: 10px;
 	font-size: large;
 	border: 3px solid #30826b5e;
-	transition: border 0.5s linear;
+	transition: border 0.2s linear;
 	outline: none;
 	color: #162235;
 	font-weight: bold;
@@ -58,7 +58,7 @@ input[type='text']:focus {
 	text-align: center;
 	color: #30826b;
 	background-color: white;
-	transition: color, background-color 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: color, background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .goBack {
@@ -73,7 +73,7 @@ input[type='text']:focus {
 	text-align: center;
 	color: #30826b;
 	background-color: white;
-	transition: color, background-color 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: color, background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 	margin: 30px auto;
 }
 
