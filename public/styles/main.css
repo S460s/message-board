@@ -4,7 +4,7 @@
 }
 
 .messageCard {
-	border: 1px solid;
+	border: 1px solid #162235;
 	margin: 10px auto;
 	width: 60vw;
 	min-width: 300px;
@@ -24,10 +24,11 @@
 .msg {
 	font-weight: bold;
 	grid-column: span 2;
+	color: #162235;
 }
 
 header {
-	background-color: rgb(43, 146, 136);
+	background-color: #30826b;
 	padding: 25px;
 	text-align: center;
 	color: aliceblue;
@@ -35,17 +36,17 @@ header {
 
 .addMsg {
 	text-decoration: none;
-	border: 2px solid rgb(43, 146, 136);
+	border: 2px solid #30826b;
 	padding: 10px 30px 10px 30px;
 	width: 100px;
 	text-align: center;
 	display: block;
 	margin: auto;
-	color: rgb(43, 146, 136);
+	color: #30826b;
 	transition: color, background-color 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .addMsg:hover {
-	background-color: rgb(43, 146, 136);
+	background-color: #30826b;
 	color: white;
 }
