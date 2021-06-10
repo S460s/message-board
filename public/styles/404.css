@@ -1,0 +1,18 @@
+.err {
+	text-align: center;
+	font-size: 150px;
+	color: #30826b;
+}
+
+.links {
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.errMsg {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #30826b;
+}

@@ -1,7 +1,11 @@
 doctype html
 html(lang="en")
   include includes/head.pug
-  body 
-    h1 404
-    a(href="/") Homepage 
-    a(href="/new") Add new blog 
+  body
+    include includes/header.pug
+
+    h1.err 404
+    h3.errMsg OOPS! Page not found.
+    div.links 
+      a(href="/").addMsg  Homepage 
+      a(href="/new").addMsg  Add new blog 

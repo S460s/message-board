@@ -5,14 +5,33 @@ body {
 form {
 	width: 50vw;
 	min-width: 300px;
+	max-width: 600px;
 	margin: auto;
-	height: 450px;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+	border: solid 2px #30826b;
+}
+
+.formContainer {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	margin-top: 100px;
-	border: solid 2px #30826b;
+	height: 450px;
+}
+
+.formTitle {
+	background-color: #30826b;
+	color: white;
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 input {
@@ -44,15 +63,16 @@ input[type='text']:focus {
 
 .goBack {
 	text-decoration: none;
-	width: 40%;
-	padding: 10px 30px 10px 30px;
+	display: block;
+	width: 50vw;
+	padding: 10px 0px 10px 0px;
 	font-size: large;
 	border: 2px solid #30826b;
 	text-align: center;
 	color: #30826b;
 	background-color: white;
 	transition: color, background-color 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-	margin: 30px;
+	margin: 30px auto;
 }
 
 .formTop {

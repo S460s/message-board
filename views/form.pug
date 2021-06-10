@@ -2,12 +2,11 @@ doctype html
 html(lang="en")
   include includes/head.pug
   body 
-    header 
-      h1.title  Message Board
+    include includes/header.pug
     form(action="/new", method='POST')
-      div.formTop
-        h1 Add new message
-      input(type="text" name='text' required placeholder='message text')
-      input(type="text" name='user' required  placeholder='username')
-      button.submitBtn Submit
+      h1.formTitle Add new message
+      div.formContainer 
+        input(type="text" name='text' required placeholder='message text')
+        input(type="text" name='user' required  placeholder='username')
+        button.submitBtn Submit
   a(href="/").goBack < Go Back
