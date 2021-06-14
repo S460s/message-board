@@ -9,7 +9,7 @@ const messagesRoutes = require('./routes/messageRoutes');
 const app = express();
 
 mongoose
-	.connect(process.env.DB_PASS || process.env.PASS, {
+	.connect(process.env.DB_PASS, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
