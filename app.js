@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
-
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const { messages_get } = require('./controllers/messageController');
 
-const Message = require('./models/Message');
+const messagesRoutes = require('./routes/messageRoutes');
 
 const app = express();
 
@@ -23,7 +22,6 @@ mongoose
 		console.log(err);
 	});
 
-// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 8000;
 
 app.set('view engine', 'pug');
@@ -31,22 +29,9 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', async (req, res) => {
-	const messages = await Message.find();
-	res.render('index', { title: 'Message Board', messages });
-});
+app.get('/', messages_get);
 
-app.get('/new', (req, res) => {
-	res.render('form', { title: 'Add new message' });
-});
-
-app.post('/new', (req, res) => {
-	const { text, user } = req.body;
-	const newMessage = new Message({ text, user, added: new Date() });
-	newMessage.save().then((result) => {
-		res.redirect('/');
-	});
-});
+app.use('/', messagesRoutes);
 
 app.use((req, res) => {
 	res.render('404', { title: '404' });
