@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+	require('dotenv').config();
+}
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -9,7 +11,7 @@ const messagesRoutes = require('./routes/messageRoutes');
 const app = express();
 
 mongoose
-	.connect(process.env.DB_PASS || process.env.PASS, {
+	.connect(process.env.DB_PASS, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})

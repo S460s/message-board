@@ -5,8 +5,7 @@ const message_create_get = (req, res) => {
 };
 
 const message_post = (req, res) => {
-	const { text, user } = req.body;
-	const newMessage = new Message({ text, user, added: new Date() });
+	const newMessage = new Message(req.body);
 	newMessage.save().then(() => {
 		res.redirect('/');
 	});
