@@ -1,6 +1,9 @@
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
+
+// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 8000;
 
 app.set('view engine', 'pug');
