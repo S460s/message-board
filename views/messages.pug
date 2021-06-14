@@ -7,7 +7,8 @@ html(lang="en")
     each message in messages 
       div.messageCard
         - const {text, user, added } = message
+        - const minutes = `${added.getMinutes()}`.length < 2? `${added.getMinutes()}0`: `${added.getMinutes()}`
         p.msg #{text}
         p.user #{user}
-        p.date Added on #{added.getUTCDate()}/#{added.getUTCMonth() + 1}/#{added.getUTCFullYear()} at #{added.getHours()}:#{added.getMinutes()}
+        p.date Added on #{added.getUTCDate()}/#{added.getUTCMonth() + 1}/#{added.getUTCFullYear()} at #{added.getHours()}:#{minutes}
   a(href="/new").addMsg Add message 
