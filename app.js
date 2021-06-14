@@ -1,7 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const { messages_get } = require('./controllers/messageController');
+
+const { home_get, get_404 } = require('./controllers/homeController');
 
 const messagesRoutes = require('./routes/messageRoutes');
 
@@ -29,10 +30,6 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', messages_get);
-
-app.use('/', messagesRoutes);
-
-app.use((req, res) => {
-	res.render('404', { title: '404' });
-});
+app.get('/', home_get);
+app.use(messagesRoutes);
+app.use(get_404);

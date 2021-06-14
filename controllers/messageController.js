@@ -14,7 +14,7 @@ const message_post = (req, res) => {
 
 const messages_get = (req, res) => {
 	Message.find().then((messages) => {
-		res.render('index', { title: 'Message Board', messages });
+		res.render('messages', { title: 'Message Board', messages });
 	});
 };
 

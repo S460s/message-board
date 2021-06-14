@@ -1,0 +1,14 @@
+.homeTitle {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #30826b;
+	font-size: 20px;
+}
+
+.description {
+	max-width: 80%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 20px;
+}
